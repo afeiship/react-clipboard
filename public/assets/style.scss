@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app,
+.app-container {
+  height: 100%;
+}
+
+@import "@/components/style.scss";
+
+.app-container {
+  .clippy{
+    width: 80%;
+    margin:50px auto;
+    position: relative;
+  }
+  .react-clipboard{
+    position: absolute;
+    right:5px;
+    top:5px;
+  }
+  textarea{
+    vertical-align: top;
+    box-sizing: border-box;
+    width:100%;
+    min-height: 120px;
+    border:1px solid #ccc;
+    padding:10px;
+    border-radius: 4px;
+    line-height: 20px;
+    &:focus{
+      outline:none;
+      border-color: #007aff;
+    }
+  }
+}
