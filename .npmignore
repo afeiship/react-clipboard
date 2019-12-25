@@ -8,8 +8,7 @@ postcss.config.js
 Rakefile
 **/npm-debug.log
 **/node_modules
-test
-__test__
+
 src
 docs
 build
@@ -19,5 +18,11 @@ tests
 postcss.config.js
 webpack.config.babel.js
 
+# tests
+test
+__test__
+__tests__
+jest.config.js
+jest.setup.js
 
 

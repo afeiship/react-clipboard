@@ -1,15 +1,27 @@
 # react-clipboard
 > A simple React wrapper around the clipboard.js library.
 
-## install
+## installation
 ```shell
-npm install -S afeiship/react-clipboard
+npm install -S @feizheng/react-clipboard
 ```
+
+## update
+```shell
+npm update @feizheng/react-clipboard
+```
+
+## properties
+| property  | type   | default | description |
+| --------- | ------ | ------- | ----------- |
+| className | String | -       | -           |
+| value     | -      | -       | -           |
+| onChange  | -      | -       | -           |
 
 ## usage
 1. import css
   ```scss
-  @import "~react-clipboard/style.scss";
+  @import "~@feizheng/react-clipboard/dist/style.scss";
 
   // customize your styles:
   $react-clipboard-options: ()
@@ -48,10 +60,8 @@ npm install -S afeiship/react-clipboard
   }
 
   ReactDOM.render(<App />, document.getElementById('app'));
+
   ```
 
 ## documentation
 - https://afeiship.github.io/react-clipboard/
-
-## resouces
-- https://github.com/zenorocha/clipboard.js/
