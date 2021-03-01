@@ -1,39 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body,
-#app,
-.app-container {
-  height: 100%;
-}
-
 @import "@/components/style.scss";
+@import "~@jswork/react-github-corner/dist/style.scss";
+@import "~@jswork/react-sw-update-tips/dist/style.scss";
+@import "~@jswork/react-demokit/dist/style.scss";
 
 .app-container {
-  .clippy{
+  .clippy {
     width: 80%;
-    margin:50px auto;
+    margin: 50px auto;
     position: relative;
   }
-  .react-clipboard{
+  .react-clipboard {
     position: absolute;
-    right:5px;
-    top:5px;
+    right: 5px;
+    top: 5px;
   }
-  textarea{
+  textarea {
     vertical-align: top;
     box-sizing: border-box;
-    width:100%;
+    width: 100%;
     min-height: 120px;
-    border:1px solid #ccc;
-    padding:10px;
+    border: 1px solid #ccc;
+    padding: 10px;
     border-radius: 4px;
     line-height: 20px;
-    &:focus{
-      outline:none;
+    &:focus {
+      outline: none;
       border-color: #007aff;
     }
+  }
+
+  .is-body {
+    padding: 20px;
+    background: #fff;
+    width: 50%;
+    min-width: 320px;
+    margin: 0 auto;
   }
 }

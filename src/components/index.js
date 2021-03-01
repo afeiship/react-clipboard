@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
+import noop from '@jswork/noop';
 import ClipboardJS from 'clipboard';
 
 const CLASS_NAME = 'react-clipboard';
 
-export default class extends Component {
-  /*===properties start===*/
+export default class ReactClipboard extends Component {
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * The runtime value.
+     */
     value: PropTypes.string,
+    /**
+     * The handler when value change.
+     */
     onChange: PropTypes.func
   };
 
   static defaultProps = {
     onChange: noop
   };
-  /*===properties end===*/
 
   get value() {
     return this.state.value;
@@ -39,12 +44,13 @@ export default class extends Component {
     this.clipboard.destroy();
   }
 
-  componentWillReceiveProps(inNextProps) {
+  shouldComponentUpdate(inNextProps) {
     const { value } = inNextProps;
     const _value = this.props.value;
     if (_value !== value) {
       this.setState({ value });
     }
+    return true;
   }
 
   createInstance() {

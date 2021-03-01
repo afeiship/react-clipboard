@@ -1,6 +1,7 @@
-import ReactClipboard from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactClipboard from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -10,9 +11,12 @@ class App extends React.Component {
 故常无欲，以观其妙，常有欲，以观其徼。
 此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。`
   };
+
   render() {
     return (
-      <div className="app-container">
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-clipboard">
         <div className="clippy">
           <textarea
             value={this.state.value}
@@ -24,7 +28,7 @@ class App extends React.Component {
           </textarea>
           <ReactClipboard value={this.state.value}>ClickToCopy!</ReactClipboard>
         </div>
-      </div>
+      </ReactDemokit>
     );
   }
 }
